@@ -11,7 +11,7 @@ string = sys.argv[1]
 if len(sys.argv) == 3:
     setFont = sys.argv[2]
 else:
-    setFont = 'slant'
+    setFont = 'standard'
 
 # Create a Figlet instance with a chosen font
 figlet = Figlet(font=setFont)  # Replace 'script' with a font you like
