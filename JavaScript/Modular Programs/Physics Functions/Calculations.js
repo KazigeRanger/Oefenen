@@ -1,13 +1,19 @@
 const constants = require("./Constants.js");
-const NewtonianPhysicsObject = require("./Functions.js");
+const ClassicalMechanicsObject = require("./Functions.js");
 
-// console.log(constants);
-// const newtonianBall = new NewtonianPhysicsObject(1); // Creates a new Newtonian physics object with a mass of 1kg
+const Mechanics = require("./BinasFunctions.js");
 
-const earth = new NewtonianPhysicsObject(5.97219e24);
-const moon = new NewtonianPhysicsObject(7.34767309e22);
+// Example use
+const mechanicsObject = new Mechanics.ForceAndMomentum();
+console.log(mechanicsObject.calculateResultantForceWithSummation([50, 2,-5,10,-35]));
+
+// Example use: calculating the gravitational force between the earth and the moon.
+const earthMass = 5.97219e24;
+const moonMass = 7.34767309e22;
+
+const earth = new ClassicalMechanicsObject();
 
 const distanceEarthMoon = 384400000; // meters
 
-const earthMoonGravitationalForce = earth.calculateGravitationalForce(earth.mass, moon.mass, distanceEarthMoon);
-console.log(earthMoonGravitationalForce);
+const earthMoonGravitationalForce = earth.calculateGravitationalForce(earthMass, moonMass, distanceEarthMoon);
+// console.log(earthMoonGravitationalForce);
