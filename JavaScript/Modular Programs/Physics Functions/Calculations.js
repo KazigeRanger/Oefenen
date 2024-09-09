@@ -1,19 +1,8 @@
 const constants = require("./Constants.js");
-const ClassicalMechanicsObject = require("./Functions.js");
+// const ClassicalMechanicsObject = require("./Functions.js");
+const functions = require("./BinasFunctions.js");
 
-const Mechanics = require("./BinasFunctions.js");
+const vibrationalObject = new functions.VibrationsWavesOptics.Vibrations();
 
-// Example use
-const mechanicsObject = new Mechanics.ForceAndMomentum();
-console.log(mechanicsObject.calculateResultantForceWithSummation([50, 2,-5,10,-35]));
+console.log(vibrationalObject.calculatePeriod(5));
 
-// Example use: calculating the gravitational force between the earth and the moon.
-const earthMass = 5.97219e24;
-const moonMass = 7.34767309e22;
-
-const earth = new ClassicalMechanicsObject();
-
-const distanceEarthMoon = 384400000; // meters
-
-const earthMoonGravitationalForce = earth.calculateGravitationalForce(earthMass, moonMass, distanceEarthMoon);
-// console.log(earthMoonGravitationalForce);
