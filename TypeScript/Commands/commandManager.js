@@ -38,7 +38,7 @@ execPromise('tsc').then(() => {
             return;
         }
             
-        console.log(`stdout: \n ${stdout}`);
+        console.log(`\nstdout:\n    ${stdout}`);
     });
 }).catch((error) => {
       console.error('Command failed with error:', error);
