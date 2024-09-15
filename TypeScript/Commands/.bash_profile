@@ -1,0 +1,1 @@
+alias tcrun="node Commands/commandManager.js"

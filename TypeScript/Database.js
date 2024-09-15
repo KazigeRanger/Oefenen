@@ -35,10 +35,10 @@ function formatDatabaseObjectProperty(database, object, property) {
         }
     }
     throw new Error(`The specified object with id: ${object} could not be found.`);
-    // return `The specified database must contain an object with property: ${object}`;
 }
-addToDatabase(database, "Rosa Veenstra", "Engels", 10);
-const vakWouterKoning = formatDatabaseObjectProperty(database, "Woutr Koning", "vak");
+// addToDatabase(database, "Rosa Veenstra", "Engels", 10);
+// const vakWouterKoning = formatDatabaseObjectProperty(database, "Woutr Koning", "vak");
 // const vakRosaVeenstra = formatDatabaseObjectProperty(database, "Rosa Veenstra", "vak");
-console.log(vakWouterKoning);
+// console.log(vakWouterKoning);
 // console.log(vakRosaVeenstra);
+console.log("Database.ts called");

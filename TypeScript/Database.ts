@@ -40,9 +40,11 @@ function formatDatabaseObjectProperty(database, object: string, property: string
     throw new Error(`The specified object with id: ${object} could not be found.`);
 }
 
-addToDatabase(database, "Rosa Veenstra", "Engels", 10);
-const vakWouterKoning = formatDatabaseObjectProperty(database, "Woutr Koning", "vak");
+// addToDatabase(database, "Rosa Veenstra", "Engels", 10);
+// const vakWouterKoning = formatDatabaseObjectProperty(database, "Woutr Koning", "vak");
 // const vakRosaVeenstra = formatDatabaseObjectProperty(database, "Rosa Veenstra", "vak");
 
-console.log(vakWouterKoning);
+// console.log(vakWouterKoning);
 // console.log(vakRosaVeenstra);
+
+console.log("Database.ts called");
