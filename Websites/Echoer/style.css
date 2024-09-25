@@ -1,0 +1,31 @@
+:root {
+    --font: 'Times New Roman', Times, serif;
+    --font-size: 2em;
+}
+
+p {
+    font-size: var(--font-size);
+}
+
+input {
+    border: none;
+    outline: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font);
+    font-size: var(--font-size);
+}
+
+.echos {
+    visibility: hidden;
+    margin: 0;
+}
+
+.echos:hover, .echos-div:hover {
+    cursor:default;
+}
+
+html, body {
+    overflow: hidden;
+}
