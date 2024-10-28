@@ -17,11 +17,20 @@ function getQuote() {
                 }
             });
             const responseJSON = yield response.json();
-            console.log(responseJSON);
+            return responseJSON;
         }
         catch (err) {
             throw err;
         }
     });
 }
-getQuote();
+function logQuote(quotePromise) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const quoteJSON = yield quotePromise;
+        const quote = quoteJSON[0].quote;
+        const author = quoteJSON[0].author;
+        const category = quoteJSON[0].category;
+        console.log(`"${quote}"\n - ${author}`);
+    });
+}
+logQuote(getQuote());
