@@ -11,4 +11,6 @@ int main() {
 
     int a = z ^ b;
     cout << a;
+
+    return 0;
 }
