@@ -23,8 +23,8 @@ void push(Queue *queue, int item) {
     // }
     Client *newClient = (Client *)malloc(sizeof(Client));
     newClient->value = item;
-    newClient->next = queue->back;
     queue->back = newClient;
+    newClient->next = queue->back;
     if (newClient->next == NULL) {
         queue->front = newClient;
     }
