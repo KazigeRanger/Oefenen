@@ -16,27 +16,16 @@ largeInt addLarge(largeInt firstLarge, largeInt secondLarge) {
     int firstLength = firstLarge.value.length();
     int secondLength = secondLarge.value.length();
 
-    cout << "1st Length: " << firstLength << endl;
-    cout << "2nd Length: " << secondLength << endl;
-
-    // Store the reversed int values to loop over
-    // string firstReversed = firstLarge.value;
-    // string secondReversed = secondLarge.value;
-
-    // reverse(firstReversed.begin(), firstReversed.end());
-    // reverse(secondReversed.begin(), secondReversed.end());
-
     // Add the necessary amount of zeroes to the .value strings of the 
     // largeInts to add.
     largeInt& biggestInt = (max(firstLength, secondLength) == firstLength) ? firstLarge : secondLarge;
     largeInt& smallestInt = (min(firstLength, secondLength) == secondLength) ? secondLarge : firstLarge;
+
     biggestInt.value.insert(0, 1, '0');
     smallestInt.value.insert(0, biggestInt.value.length()-smallestInt.value.length(), '0');
+
     reverse(biggestInt.value.begin(), biggestInt.value.end());
     reverse(smallestInt.value.begin(), smallestInt.value.end());
-
-    cout << "First int: " << firstLarge.value << endl;
-    cout << "Second int: " << secondLarge.value << endl;
 
     // Define a stack to store the result of each individual addition
     stack<char> resultStack;
@@ -57,8 +46,6 @@ largeInt addLarge(largeInt firstLarge, largeInt secondLarge) {
             carriedTerm = 0;
         }
     }
-
-    cout << "Result Stack Size: " << resultStack.size() << endl;
 
     // Define a largeInt to store the result value of the addition
     largeInt result;
@@ -86,12 +73,11 @@ int main() {
     largeInt firstInteger;
     largeInt secondInteger;
 
-    firstInteger.value = "92386720938476";
-    secondInteger.value = "345734584345";
+    firstInteger.value = "398746029837692803790823746098723480967230498729384760";
+    secondInteger.value = "293084758092734680927340986709238467028947092834760987";
 
     largeInt additionResult = addLarge(firstInteger, secondInteger);
     cout << "Addition result: " << additionResult.value << endl;
-    cout << "Result Length: " << additionResult.value.length() << endl;
 
     // Keep track of the runtime of the program
     auto end1 = chrono::high_resolution_clock::now();
