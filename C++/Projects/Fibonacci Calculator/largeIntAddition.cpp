@@ -3,13 +3,10 @@
 #include <stack>
 #include <algorithm>
 #include <chrono>
+#include "largeInt.hpp"
 using namespace std;
 
 // auto start = chrono::high_resolution_clock::now();
-
-typedef struct largeInt {
-    string value;
-} largeInt;
 
 largeInt addLarge(largeInt firstLarge, largeInt secondLarge) {
     // Store the lengths of the values of the integers to add
