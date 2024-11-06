@@ -62,24 +62,24 @@ largeInt addLarge(largeInt firstLarge, largeInt secondLarge) {
     }
 }
 
-int main() {
-    // Keep track of the runtime of the program
-    auto start1 = chrono::high_resolution_clock::now();
+// int main() {
+//     // Keep track of the runtime of the program
+//     auto start1 = chrono::high_resolution_clock::now();
 
-    // Code to run
-    largeInt firstInteger;
-    largeInt secondInteger;
+//     // Code to run
+//     largeInt firstInteger;
+//     largeInt secondInteger;
 
-    firstInteger.value = "398746029837692803790823746098723480967230498729384760";
-    secondInteger.value = "293084758092734680927340986709238467028947092834760987";
+//     firstInteger.value = "398746029837692803790823746098723480967230498729384760";
+//     secondInteger.value = "293084758092734680927340986709238467028947092834760987";
 
-    largeInt additionResult = addLarge(firstInteger, secondInteger);
-    cout << "Addition result: " << additionResult.value << endl;
+//     largeInt additionResult = addLarge(firstInteger, secondInteger);
+//     cout << "Addition result: " << additionResult.value << endl;
 
-    // Keep track of the runtime of the program
-    auto end1 = chrono::high_resolution_clock::now();
-    chrono::duration<double> duration1 = end1 - start1;
-    cout << "Runtime: " << duration1.count() << " seconds" << endl;
+//     // Keep track of the runtime of the program
+//     auto end1 = chrono::high_resolution_clock::now();
+//     chrono::duration<double> duration1 = end1 - start1;
+//     cout << "Runtime: " << duration1.count() << " seconds" << endl;
 
-    return 0;
-}
+//     return 0;
+// }
